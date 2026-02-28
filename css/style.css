@@ -1,0 +1,114 @@
+﻿/***** FONTS AND VARIABLES *****/
+@font-face { font-family: gidolinyaregular; src: url(gidolinyaregular.otf); }
+:root {
+	--bg_color: #EEEEEE;
+	--col_sau: #3399FF;
+	--col_shop: gray;
+}
+
+
+/***** BROWSER FIX *****/
+html, body { width: 100%; top: 0; background: white; overflow: hidden; } html, body, p, div, input, table, tr, td, img, b, span, form, a, select, option, h1, h2, h3, h4 { display: block; border: 0; margin: 0; padding: 0; font-size: 1em; font-family: gidolinyaregular; font-weight: normal; } a, textarea:focus, input:focus { outline: none; border: none; text-decoration: none; } table { display: table; border-collapse: collapse; } tr { display: table-row; } td { display: table-cell; }
+
+
+/***** STANDARD CLASSES *****/
+.center_pf 		{ position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: auto; }
+.center_ab 		{ position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: auto; }
+.center_full 	{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; }
+.centered 		{ display: block; width: 100%; text-align: center; margin: auto; }
+.inputs				{ border: none; border-bottom: 1px solid gray !important; text-align: center; }
+.outline			{ border-top: 1px solid gray; border-bottom: 1px solid gray; }
+.bar_top			{ dislay: block; position: fixed; top: 0; left: 0; width: 100%; }
+.bar_bottom		{ dislay: block; position: fixed; bottom: 0; left: 0; width: 100%; }
+.outofsight		{ position: absolute; top: 100%; }
+.raised				{ box-shadow: 0 0 1px 1px gray; }
+
+
+/***** LOGIN STYLING *****/
+#login_screen							{ overflow-x: hidden; overflow-y: auto; }
+#rendered_login						{ width: 700px; }
+#rendered_login h1				{ color: var(--col_sau); font-size: 4em; }
+#rendered_login h1 b 			{ margin: 0 0 -0.2em; font-size: 2em; }
+#rendered_login form 			{ margin: 2em 0 1em; }
+
+#form_options							{ width: 450px; margin: 0 auto; padding: 1em 0 3em; }
+#form_options .options		{ display: none; width: 100%; white-space: nowrap; margin-bottom: 2.5em; text-align: center; }
+#form_options .options a	{ display: inline-block; text-align: center; width: 140px; padding: 0.5em 0; transition: background 0.5s, color 0.5s; border: 1px solid var(--col_sau); color: black; }
+#form_options .o_selected { background: var(--col_sau); color: white !important; }
+#form_options .options a:hover	{ background: var(--col_sau); color: white; }
+#opt_1, #opt_2, #opt_3 					{ }
+#opt_1			{ display: block; }
+#opt_2			{ display: none; }
+#opt_3			{ display: none; }
+
+#rendered_login #lb_usr 	{ width: 80%; font-size: 1.5em; }
+#rendered_login #lb_und 	{ width: 80% !important; font-size: 1.5em; }
+#rendered_login #lb_btn 	{ width: 40%; font-size: 1.5em; color: white; background: var(--col_sau); padding: 0.2em 0; cursor: pointer; border: 1px solid var(--col_sau); transition: background 0.5s, color 0.5s; }
+#rendered_login #lb_btn:hover { background: white; color: var(--col_sau); }
+#rendered_login select 		{ width: 80%; font-size: 1.5em; margin: 0em auto; }
+#msg_error 								{ padding: 1em 0; color: red; font-size: 2em; }
+.error 								{ width: 100%; color: red; font-size: 1.5em; text-align: center; }
+
+#workings								{ width: 100%; }
+#workings h1						{ font-size: 2em; padding: 1em 0; font-weight: bolder; background: var(--col_sau); color: white; }
+#workings	.screens_r		{ position: absolute; display: block; right: 0; width: 40%; text-align: right; margin: 3em; }
+
+
+/***** SKEMA STYLING *****/
+#rendered_skema 			{ overflow-y: auto; overflow-x: hidden; }
+#rendered_skema h1		{ font-size: 1.5em; background: var(--col_sau); color: white; margin: auto; padding: 0.5em 0; }
+.prev_semester { display: none; }
+
+.personligt_skema 										{ width: 100%; }
+.personligt_skema td 									{ padding: 0.5em 0.25em; text-align: center; font-size: 1em; }
+.sau_week															{ font-size: 1.5em; padding: 1em 0 1em; margin: 0 auto 0; color: var(--col_sau); }
+.not_title { border-top: 1px solid gray; }
+.ps_titles td { font-weight: bold; padding: 0.75em 0; font-size: 1em; background: var(--bg_color); }
+
+/* differential cell coloring */
+.row_more 										{ display: none; }
+.row_more td 									{ padding: 1em 0; }
+.not_title .code							{ cursor: pointer; }
+.not_title:hover td						{ background: darkgray; color: white; }
+
+/* download in app stores */
+.app_stores 			{ display: block; margin: 1em 0 0.5em; width: 100%; text-align: center; }
+.app_stores a 		{ display: inline-block; margin: 0 1em; }
+.app_stores img 	{ height: 50px; }
+
+/* list of week numbers*/
+#week_list							{ margin: 0 auto; background: var(--col_sau); color: white; text-align: left; padding: 0 1em; display: block; width: 100%; z-index: 50; }
+#week_list #me          { display: block; position: absolute; right: 72px; bottom: 8px; color: white; }
+#week_list #me a        { color: white; }
+#week_list > a					{ display: inline-block; margin: 0; padding: 0.5em; text-align: center; color: white; }
+#week_list > a:hover		{ background: white; color: var(--col_sau); font-weight: bold; }
+
+/* top buttons */
+#logout_btn 		{ right: 0; }
+#help_btn 			{ left: 0; }
+#logout_btn, #help_btn							{ color: white; position: fixed; top: 16px; margin: 0 2em; }
+
+
+/***** SHOP STYLING *****/
+.shopped > td > p { color: gray; }
+.shopped > td > p a { color: var(--col_sau); text-decoration: none; }
+.shopped table 							{ border-collapse: collapse; width: 100%; display: table; background: var(--col_shop); }
+.shopped table td						{ color: white; }
+.shop_titles	td						{ font-weight: bolder !important; }
+.shopped td:nth-child(2), .shopped td:nth-child(3), .shopped td:nth-child(4), .shopped td:nth-child(7)		{ display: none; }
+.shopped tr:not(:first-child) td								{ border-top: 1px solid white; }
+
+
+/***** PAGE FRONT STYLING *****/
+#zigzag * { display: inline-block; box-sizing: border-box; text-align: center; vertical-align: middle; padding: 32px; width: 100%; margin-bottom: 6em; }
+#zigzag p { width: 33%; font-size: 1.25em; }
+#zigzag img { max-width: 66%; }
+
+@media screen and (max-width: 800px) {
+	#zigzag * { width: 100% !important; max-width: 100% !important; }
+}
+
+#support, #help { width: 100%; text-align: center; padding: 2em 0 6em; }
+#support p, #help p { font-size: 1.25em; }
+#support a, #help a { color: var(--col_sau); text-decoration: none; display: inline; }
+#support img, #help img { margin: 32px auto 0; max-width: 300px; }

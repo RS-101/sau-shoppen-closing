@@ -2,7 +2,7 @@
 
 	$c = preg_replace("/[^a-zA-Z0-9]+/", "", strtolower(substr($_POST['c'],0,6)));
 
-	$codes = json_decode(strtolower(file_get_contents('data_ku_codes.json')));
+	$codes = json_decode(strtolower(file_get_contents(__DIR__ . '/data_ku_codes.json')));
 
 	$ku_urls = array();
 
